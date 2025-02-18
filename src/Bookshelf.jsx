@@ -20,7 +20,12 @@ function Bookshelf() {
     function handleSubmit(e) {
         e.preventDefault()
         setTasks([...tasks, books])
-
+        setBooks({
+            title: '',
+            author: '',
+    
+        })
+        
     }
 
     return (
