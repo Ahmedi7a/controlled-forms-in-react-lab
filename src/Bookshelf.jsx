@@ -4,7 +4,7 @@ import './App.css'
 
 function Bookshelf() {
 
-    const [tasks, setTasks] = useState([])
+    const [newBook, setNewBook] = useState([])
 
     const [books, setBooks] = useState([
         { title: '', author: '' },
@@ -19,7 +19,7 @@ function Bookshelf() {
 
     function handleSubmit(e) {
         e.preventDefault()
-        setTasks([...tasks, books])
+        setNewBook([...newBook, books])
         setBooks({
             title: '',
             author: '',
@@ -56,7 +56,7 @@ function Bookshelf() {
             </div>
             <div className="bookCardsDiv">
                 {/* Book cards will display here */}
-                {tasks.map((task, index) => (
+                {newBook.map((task, index) => (
                     <div key={index} className="bookCard">
                         <h4>{task.title}</h4>
                         <p>Done by {task.author}</p>                    </div>
